@@ -1023,6 +1023,13 @@
             "symbolic_name": "subscription_manager_release_show"
         },
         {
+            "command": "find /etc/pki/product-default/ /etc/pki/product/ -name '*pem' -exec rct cat-cert --no-content {} \;",
+            "pattern": [
+                "ID:",
+            ],
+            "symbolic_name": "subscription_manager_installed_product_ids"
+        },
+        {
             "command": "/usr/sbin/ss -tupna",
             "pattern": [],
             "symbolic_name": "ss"
@@ -3302,3 +3309,4 @@
     },
     "version": "2019-08-01T13:26:17.535363"
 }
+
